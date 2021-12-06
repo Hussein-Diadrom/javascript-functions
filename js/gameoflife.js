@@ -35,7 +35,7 @@ const corners = (state = []) => {
     let botmLeft = state[0][0];
     let topRigth = state[state.length - 1][0];
 
-    return [[botmLeft, botmLeft], [topRigthm, botmLeft]];
+    return [[botmLeft, botmLeft], [topRigth, botmLeft]];
 };
 
 const printCells = (state) => {};
