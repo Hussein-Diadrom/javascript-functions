@@ -1,11 +1,35 @@
-function seed() {}
 
-function same([x, y], [j, k]) {}
+
+function seed() {
+    let arr = Array.from(arguments);
+
+    return arr;
+
+}
+
+function same([x, y], [j, k]) {
+
+    if (x === j && y === k) {
+        return true;
+    }
+    return false;
+}
 
 // The game state to search for `cell` is passed as the `this` value of the function.
-function contains(cell) {}
+function contains(cell) {
+    if (this.includes(cell)) {
+        return true;
 
-const printCell = (cell, state) => {};
+    }
+    return false;
+}
+
+const printCell = (cell, state) => {
+    if (state.contains.call(cell)) {
+        return '\u25A3';
+    }
+    return '\u25A2'; 
+};
 
 const corners = (state = []) => {};
 
@@ -27,6 +51,7 @@ const startPatterns = {
     rpentomino: [
       [3, 2],
       [2, 3],
+      [3, 3],
       [3, 3],
       [3, 4],
       [4, 4]
