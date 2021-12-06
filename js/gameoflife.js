@@ -31,16 +31,17 @@ const corners = (state = []) => {
 
     if (state.length === 0) {
         return {
-            botmLeft: [0, 0],
-            topRight: [0, 0]
+            topRight: [0, 0],
+            botmLeft: [0, 0]
+            
         }
     }
     const xs = state.map(([x, _]) => x);
     const ys = state.map(([_, y]) => y);
-return {
-    botmLeft: [Math.min(...xs), Math.min(...ys)],
-    topRight: [Math.max(...xs),Math.max(...ys)]
-} 
+    return {
+    topRight: [Math.max(...xs), Math.max(...ys)],
+    botmLeft: [Math.min(...xs), Math.min(...ys)]
+   
 };
 
 const printCells = (state) => {};
