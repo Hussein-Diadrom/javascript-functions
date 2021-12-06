@@ -27,7 +27,16 @@ const printCell = (cell, state) => {
     return '\u25A2'; 
 };
 
-const corners = (state = []) => {};
+const corners = (state = []) => {
+
+    if (state.length === 0) {
+        return [[0,0], [0, 0]];
+    }
+    let botmLeft = state[0][0];
+    let topRigth = state[state.length - 1][0];
+
+    return [[botmLeft, botmLeft], [topRigthm, botmLeft]];
+};
 
 const printCells = (state) => {};
 
